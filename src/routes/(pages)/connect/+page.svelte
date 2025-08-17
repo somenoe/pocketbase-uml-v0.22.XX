@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import Card from '$lib/components/Card.svelte';
   import NotificationModal from '$lib/components/NotificationModal.svelte';
   import PageMeta from '$lib/components/PageMeta.svelte';
@@ -79,7 +80,7 @@
           target="_blank"
           rel="noreferrer">export the collections JSON from the server</a
         >
-        and paste it <a href="/import">here</a>.
+        and paste it <a href="{base}/import">here</a>.
       </li>
     </ul>
   </NotificationModal>

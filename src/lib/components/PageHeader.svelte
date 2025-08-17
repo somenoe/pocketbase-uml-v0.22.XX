@@ -1,11 +1,12 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
+  import { base } from '$app/paths';
   import IconLogoDrawn from './icons/IconLogoDrawn.svelte';
   import RepoBadge from './RepoBadge.svelte';
 </script>
 
 <header transition:fade>
-  <a href="/">
+  <a href="{base}/">
     <h1>
       <IconLogoDrawn size="1.35em" />
       <span>Pocket<strong>Base</strong>UML</span>

@@ -5,6 +5,7 @@
   import { PUBLIC_URL } from '$lib/config';
   import example from '$lib/example.json';
   import hero from '$lib/images/hero.png';
+  import { base } from '$app/paths';
   import { encode } from 'js-base64';
   import { blur, fade, scale } from 'svelte/transition';
 
@@ -23,11 +24,11 @@
     <div class="buttons" in:scale>
       <Button
         large
-        href="/view#{encode(JSON.stringify(example))}"
+        href="{base}/view#{encode(JSON.stringify(example))}"
         on:click={() => (buttonsVisible = false)}>See an example</Button
       >
-      <Button large outlined href="/import">Import collections</Button>
-      <Button large outlined href="/connect">Connect to a server</Button>
+      <Button large outlined href="{base}/import">Import collections</Button>
+      <Button large outlined href="{base}/connect">Connect to a server</Button>
     </div>
   {/if}
   <img class="picture" src={hero} alt="PocketBaseUML" in:blur={{ delay: 100 }} />
