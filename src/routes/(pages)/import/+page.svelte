@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import Button from '$lib/components/Button.svelte';
   import Card from '$lib/components/Card.svelte';
   import NotificationModal from '$lib/components/NotificationModal.svelte';
@@ -34,7 +35,7 @@
     try {
       const data = JSON.parse(code);
       validateCollections(data);
-      goto(`/view#${encode(JSON.stringify(data))}`);
+      goto(`${base}/view#${encode(JSON.stringify(data))}`);
     } catch {
       error = true;
     }
