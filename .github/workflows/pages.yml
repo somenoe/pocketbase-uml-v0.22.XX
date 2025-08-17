@@ -29,8 +29,12 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm i
-      - run: npm run build
+      - name: Install dependencies
+        run: npm i
+      - name: build
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}'
+        run: npm run build
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

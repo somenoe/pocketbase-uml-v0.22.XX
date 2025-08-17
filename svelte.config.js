@@ -7,7 +7,10 @@ const config = {
   kit: {
     adapter: adapter({ pages: 'app', assets: 'app' }),
     prerender: { handleMissingId: 'ignore' },
-    appDir: 'a'
+    appDir: 'a',
+    paths: {
+      base: process.env.BASE_PATH || ''
+    }
   }
 };
 
