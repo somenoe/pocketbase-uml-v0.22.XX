@@ -37,7 +37,7 @@
       LOCAL_STORAGE_CONNECTION_KEY,
       encode(JSON.stringify({ url, email, password }))
     );
-    goto('/view');
+    goto(`${base}/view`);
   };
 </script>
 

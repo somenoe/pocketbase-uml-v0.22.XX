@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import Toolbar from '$lib/components/Toolbar.svelte';
   import { LOCAL_STORAGE_CONNECTION_KEY, MAX_ZOOM, PUBLIC_URL } from '$lib/config';
   import {
@@ -37,7 +38,7 @@
 
   const close = (forget?: boolean) => {
     if (forget) localStorage.removeItem(LOCAL_STORAGE_CONNECTION_KEY);
-    goto('/', { replaceState: true });
+    goto(`${base}/`, { replaceState: true });
   };
 
   try {
