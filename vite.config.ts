@@ -5,5 +5,6 @@ export default defineConfig({
   plugins: [sveltekit()],
   test: {
     include: ['src/**/*.{test,spec}.{js,ts}']
-  }
+  },
+  base: '/pocketbase-uml-v0.22.XX/'
 });
